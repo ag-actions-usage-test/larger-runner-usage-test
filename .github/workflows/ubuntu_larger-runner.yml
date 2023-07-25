@@ -65,7 +65,7 @@ jobs:
           echo $iterator
           echo "::set-output name=iterator::$iterator"
   actions:
-    runs-on: ag-runner-ubuntu
+    runs-on: ${{ matrix.os }}
     needs:
       - set_variables
     strategy:
